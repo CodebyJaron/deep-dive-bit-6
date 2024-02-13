@@ -1,6 +1,7 @@
 import PrimaryButton from './common/PrimaryButton';
 import { MdKeyboardArrowDown } from 'react-icons/md';
 import { FaRegEnvelopeOpen } from 'react-icons/fa';
+import DropdownMenu from './dropdown/DropdownMenu';
 
 const Navbar = () => {
     return (
@@ -13,18 +14,44 @@ const Navbar = () => {
                 </div>
 
                 <div className='flex flex-row justify-between items-center gap-8 scale-110'>
-                    <div className='flex items-center'>
-                        <span className='inline-block uppercase font-bold text-[10px]'>Onze verhalen</span>
-                        <MdKeyboardArrowDown className='w-4 h-4' />
-                    </div>
-                    <div className='flex items-center'>
-                        <p className='inline-block uppercase font-bold text-[10px]'>Onze karakters</p>
-                        <MdKeyboardArrowDown className='w-4 h-4' />
-                    </div>
-                    <div className='flex items-center'>
-                        <p className='inline-block uppercase font-bold text-[10px]'>Bij code 0 producties</p>
-                        <MdKeyboardArrowDown className='w-4 h-4' />
-                    </div>
+                    <DropdownMenu
+                        trigger={
+                            <div className='flex items-center'>
+                                <span className='inline-block uppercase font-bold text-[10px] cursor-pointer'>
+                                    Onze verhalen
+                                </span>
+                                <MdKeyboardArrowDown className='w-4 h-4' />
+                            </div>
+                        }
+                    >
+                        {/* Hier content */}
+                    </DropdownMenu>
+
+                    <DropdownMenu
+                        trigger={
+                            <div className='flex items-center'>
+                                <p className='inline-block uppercase font-bold text-[10px] cursor-pointer'>
+                                    Onze karakters
+                                </p>
+                                <MdKeyboardArrowDown className='w-4 h-4' />
+                            </div>
+                        }
+                    >
+                        {/* Hier content */}
+                    </DropdownMenu>
+
+                    <DropdownMenu
+                        trigger={
+                            <div className='flex items-center'>
+                                <p className='inline-block uppercase font-bold text-[10px] cursor-pointer'>
+                                    Bij code 0 producties
+                                </p>
+                                <MdKeyboardArrowDown className='w-4 h-4' />
+                            </div>
+                        }
+                    >
+                        {/* Hier content */}
+                    </DropdownMenu>
                 </div>
 
                 <div className='flex justify-center'>
