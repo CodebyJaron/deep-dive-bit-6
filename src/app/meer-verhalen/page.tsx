@@ -2,6 +2,7 @@
 import Carousel from '@/components/Carousel';
 import StoryAbout from '@/components/sections/StoryAbout';
 import StoryPictures from '@/components/sections/StoryPictures';
+import { useState } from 'react';
 
 interface Story {
     name: string;
@@ -28,6 +29,18 @@ const stories: Story[] = [
 ];
 
 export default function MeerVerhalen() {
+    const [index, setIndex] = useState(0);
+
+    const nextStory = () => {
+        setIndex((prevIndex) => (prevIndex + 1) % stories.length);
+    };
+
+    const prevStory = () => {
+        setIndex((prevIndex) => (prevIndex - 1 + stories.length) % stories.length);
+    };
+
+    const story = stories[index];
+
     return (
         <div className='min-h-full'>
             <div className='grid justify-center'>
@@ -36,12 +49,12 @@ export default function MeerVerhalen() {
 
             <div className='mt-16 lg:px-24 sm:px-12 px-6 space-y-8'>
                 <StoryAbout
-                    aboutHeader={stories[0].aboutHeader}
-                    aboutDescription={stories[0].aboutDescription}
-                    aboutImage={stories[0].aboutImage}
+                    aboutHeader={story.aboutHeader}
+                    aboutDescription={story.aboutDescription}
+                    aboutImage={story.aboutImage}
                 />
 
-                <StoryPictures images={stories[0].images} />
+                <StoryPictures images={story.images} />
             </div>
 
             <div className='mt-16'></div>
