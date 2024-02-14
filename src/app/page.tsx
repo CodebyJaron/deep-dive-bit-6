@@ -1,7 +1,6 @@
 'use client';
 
 import Carousel from '@/components/Carousel';
-import Footer from '@/components/Footer';
 import About from '@/components/sections/About';
 import Companies from '@/components/sections/Companies';
 
@@ -9,10 +8,10 @@ export default function Home() {
     return (
         <div className='min-h-full'>
             <div className='grid justify-center'>
-                <Carousel />
+                <Carousel headerText='Code 0 Producties' headerSubtext='Avontuurlijk theater op elke plek!' />
             </div>
 
-            <div className='px-24'>
+            <div className='lg:px-24 sm:px-12 px-6'>
                 <About />
 
                 <Companies />

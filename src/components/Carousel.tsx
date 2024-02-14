@@ -1,6 +1,11 @@
 import { useState, useEffect } from 'react';
 
-const Carousel = () => {
+interface props {
+    headerText: string;
+    headerSubtext: string;
+}
+
+const Carousel = ({ headerText, headerSubtext }: props) => {
     const [currentSlide, setCurrentSlide] = useState(0);
 
     const images = ['/images/slide-1.jpg', '/images/slide-2.jpg', '/images/slide-3.jpeg'];
@@ -16,15 +21,20 @@ const Carousel = () => {
     }, []);
 
     return (
-        <div className='relative h-[80vh] w-full max-w-full overflow-hidden rounded-b-[20%]'>
+        <div className='relative h-[80vh] w-full max-w-full overflow-hidden rounded-b-[20%] flex flex-col justify-center items-center'>
             {images.map((image, index) => (
                 <div key={index} className={`carousel-slide ${index === currentSlide ? '' : 'hidden'}`}>
-                    <img src={image} alt={`Image ${index + 1}`} className='blur-sm rounded-b-lg brightness-50' />
+                    <img
+                        src={image}
+                        alt={`Image ${index + 1}`}
+                        className='blur-sm rounded-b-lg brightness-50'
+                        style={{ width: '100%', height: 'auto' }}
+                    />
                 </div>
             ))}
-            <div className='absolute -top-[50px] w-full h-full flex flex-col items-center justify-center'>
-                <h1 className='text-white text-[4.2rem] font-bold'>Code 0 Producties</h1>
-                <p className='text-gray-300 text-xl'>Avontuurlijk theater op elke plek!</p>
+            <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center'>
+                <h1 className='text-white text-[4.2rem] font-bold'>{headerText}</h1>
+                <p className='text-gray-300 text-xl'>{headerSubtext}</p>
             </div>
         </div>
     );

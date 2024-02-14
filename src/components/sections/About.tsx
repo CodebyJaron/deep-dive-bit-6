@@ -3,7 +3,7 @@ import PrimaryButton from '../common/PrimaryButton';
 const About = () => {
     return (
         <div>
-            <div className='grid grid-cols-2 gap-8 mt-16'>
+            <div className='grid lg:grid-cols-2 sm:grid-cols-1 gap-8 mt-16'>
                 <div>
                     <h1 className='text-primary font-bold text-3xl'>Avontuurlijk theater op elke plek</h1>
                     <p className='text-gray-400 text-xs mt-4'>
@@ -43,7 +43,7 @@ const About = () => {
                 </div>
             </div>
 
-            <div className='grid grid-cols-2 gap-8 mt-16'>
+            <div className='grid lg:grid-cols-2 sm:grid-cols-1 gap-8 mt-16'>
                 <div className='overflow-hidden rounded-lg bg-gray-200 shadow'>
                     <div className='px-4 py-5 sm:p-6'></div>
                 </div>
