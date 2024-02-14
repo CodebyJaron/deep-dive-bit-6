@@ -55,7 +55,7 @@ const Navbar = () => {
                 </div>
 
                 <div className='flex justify-center'>
-                    <PrimaryButton>
+                    <PrimaryButton extraClass='py-2 px-4'>
                         <FaRegEnvelopeOpen className='mt-1' /> Contact
                     </PrimaryButton>
                 </div>

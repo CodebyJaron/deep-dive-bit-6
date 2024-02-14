@@ -1,5 +1,6 @@
 import { MdKeyboardArrowRight, MdMarkEmailUnread } from 'react-icons/md';
 import { FaPhoneVolume } from 'react-icons/fa6';
+import { IoLocationSharp } from 'react-icons/io5';
 
 const Footer = () => {
     const paginateItems = [
@@ -58,13 +59,13 @@ const Footer = () => {
         },
         {
             href: '/',
-            text: '<EMAIL>',
-            icon: <FaPhoneVolume className='w-4 h-4 text-primary' />,
+            text: 'Nieuw Amsterdamseweg 74, Schoonebeek',
+            icon: <IoLocationSharp className='w-4 h-4 text-primary' />,
         },
         {
             href: '/',
-            text: '<EMAIL>',
-            icon: <FaPhoneVolume className='w-4 h-4 text-primary' />,
+            text: '',
+            icon: '',
         },
     ];
 

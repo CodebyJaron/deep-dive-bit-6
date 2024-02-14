@@ -27,11 +27,13 @@ const About = () => {
 
                     <div className='mt-4 flex gap-8'>
                         <div>
-                            <PrimaryButton>Ons verhaal</PrimaryButton>
+                            <PrimaryButton extraClass='py-2 px-4'>Ons verhaal</PrimaryButton>
                         </div>
 
                         <div>
-                            <PrimaryButton inline={true}>Onze karakters</PrimaryButton>
+                            <PrimaryButton extraClass='py-2 px-4' inline={true}>
+                                Onze karakters
+                            </PrimaryButton>
                         </div>
                     </div>
                 </div>
@@ -69,11 +71,13 @@ const About = () => {
 
                     <div className='mt-4 flex justify-end gap-8'>
                         <div>
-                            <PrimaryButton>Ons verhaal</PrimaryButton>
+                            <PrimaryButton extraClass='py-2 px-4'>Ons verhaal</PrimaryButton>
                         </div>
 
                         <div>
-                            <PrimaryButton inline={true}>Onze karakters</PrimaryButton>
+                            <PrimaryButton extraClass='py-2 px-4' inline={true}>
+                                Onze karakters
+                            </PrimaryButton>
                         </div>
                     </div>
                 </div>
