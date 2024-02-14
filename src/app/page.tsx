@@ -7,7 +7,7 @@ import Companies from '@/components/sections/Companies';
 export default function Home() {
     return (
         <div className='min-h-full'>
-            <div className='grid justify-center'>
+            <div className='grid justify-center object-fill'>
                 <Carousel headerText='Code 0 Producties' headerSubtext='Avontuurlijk theater op elke plek!' />
             </div>
 
