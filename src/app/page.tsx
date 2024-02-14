@@ -19,7 +19,7 @@ export default function Home() {
             </div>
 
             {/* Extra space */}
-            <div className='mb-12'></div>
+            <div className='mb-12 bg-gray-100'></div>
         </div>
     );
 }
