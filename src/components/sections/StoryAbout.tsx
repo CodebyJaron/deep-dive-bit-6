@@ -14,7 +14,7 @@ const StoryAbout = ({ aboutHeader, aboutDescription, aboutImage }: props) => {
                 </div>
 
                 <div className='overflow-hidden rounded-lg bg-gray-200 shadow'>
-                    <div className='px-4 py-5 sm:p-6'></div>
+                    <img className='object-fit' src={aboutImage} alt='image' />
                 </div>
             </div>
         </div>
