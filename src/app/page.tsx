@@ -20,8 +20,6 @@ export default function Home() {
 
             {/* Extra space */}
             <div className='mb-12'></div>
-
-            <Footer />
         </div>
     );
 }

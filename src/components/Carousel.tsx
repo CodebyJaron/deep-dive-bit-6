@@ -18,7 +18,7 @@ const Carousel = () => {
     return (
         <div className='relative h-[80vh] w-full max-w-full overflow-hidden rounded-b-[20%]'>
             {images.map((image, index) => (
-                <div key={index} className={`carousel-slide ${index === currentSlide ? 'block' : 'hidden'}`}>
+                <div key={index} className={`carousel-slide ${index === currentSlide ? '' : 'hidden'}`}>
                     <img src={image} alt={`Image ${index + 1}`} className='blur-sm rounded-b-lg brightness-50' />
                 </div>
             ))}

@@ -24,7 +24,11 @@ const Navbar = () => {
                             </div>
                         }
                     >
-                        {/* Hier content */}
+                        <div className=''>
+                            <a href='#' className='block px-4 py-2 text-sm text-white hover:bg-gray-100 rounded-md'>
+                                Save
+                            </a>
+                        </div>
                     </DropdownMenu>
 
                     <DropdownMenu

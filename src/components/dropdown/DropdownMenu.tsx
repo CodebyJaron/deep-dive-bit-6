@@ -45,7 +45,7 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({ trigger, children }) => {
             {isOpen && (
                 <div
                     ref={dropdownRef}
-                    className='absolute z-10 right-0 mt-2 w-48 bg-gray-200 rounded-md shadow-lg py-1'
+                    className='absolute z-50 right-0 mt-2 w-48 bg-gray-200 rounded-md shadow-lg py-1'
                 >
                     {children}
                 </div>
