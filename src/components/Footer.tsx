@@ -116,10 +116,12 @@ const Footer = () => {
                 </div>
             </div>
 
-            <div className='py-4 bg-gray-300'>
-                <p className='flex justify-center text-xs text-gray-500'>
+            <div className='py-4 px-16 bg-gray-300 flex justify-between'>
+                <p className='text-xs text-gray-500'>
                     © Copyright 2023️ - Code 0 Producties - Alle rechten voorbehouden.
                 </p>
+
+                <p className='text-xs text-gray-500'>Algemene voorwaarden | Cookies</p>
             </div>
         </div>
     );
