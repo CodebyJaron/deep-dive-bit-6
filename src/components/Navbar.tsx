@@ -18,7 +18,7 @@ const Navbar = () => {
         <nav className='relative z-10'>
             <div className='border-b-8 border-primary' />
 
-            <div className='py-4 bg-white grid grid-cols-3'>
+            <div className='py-4 bg-white grid grid-cols-3 items-center'>
                 <div className='flex justify-center'>
                     <Image src='/logo.png' alt='logo' className='w-16 cursor-pointer' width={64} height={64} />
                 </div>
