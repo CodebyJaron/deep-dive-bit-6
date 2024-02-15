@@ -11,6 +11,11 @@ import PrimaryButton from "./common/PrimaryButton";
 
 const NAV_ITEMS = [
     {
+        label: "Home",
+        link: "/",
+        dropdown: [],
+    },
+    {
         label: "Onze verhalen",
         link: "#",
         dropdown: [{ label: "Onze verhalen", link: "/verhalen" }],
@@ -61,19 +66,22 @@ const Navbar = () => {
                                         <span className="inline-block uppercase font-bold text-[10px] cursor-pointer">
                                             {item.label}
                                         </span>
-                                        <MdKeyboardArrowDown className="w-4 h-4" />
+                                        {item.dropdown.length > 0 && (
+                                            <MdKeyboardArrowDown className="w-4 h-4 ml-1" />
+                                        )}
                                     </div>
                                 }
                             >
-                                {item.dropdown.map((subItem, subIndex) => (
-                                    <Link
-                                        key={subIndex}
-                                        href={subItem.link}
-                                        className="block px-4 py-2 text-sm text-black hover:bg-gray-100 rounded-md"
-                                    >
-                                        {subItem.label}
-                                    </Link>
-                                ))}
+                                {item.dropdown.length > 0 &&
+                                    item.dropdown.map((subItem, subIndex) => (
+                                        <Link
+                                            key={subIndex}
+                                            href={subItem.link}
+                                            className="block px-4 py-2 text-sm text-black hover:bg-gray-100 rounded-md"
+                                        >
+                                            {subItem.label}
+                                        </Link>
+                                    ))}
                             </DropdownMenu>
                         ))}
                     </div>
@@ -106,15 +114,16 @@ const Navbar = () => {
                             <div className="px-4 py-2 text-black font-bold border-b border-gray-200">
                                 {item.label}
                             </div>
-                            {item.dropdown.map((subItem, subIndex) => (
-                                <Link
-                                    key={subIndex}
-                                    href={subItem.link}
-                                    className="block px-4 py-2 text-sm text-black hover:bg-gray-100 rounded-md"
-                                >
-                                    {subItem.label}
-                                </Link>
-                            ))}
+                            {item.dropdown.length > 0 &&
+                                item.dropdown.map((subItem, subIndex) => (
+                                    <Link
+                                        key={subIndex}
+                                        href={subItem.link}
+                                        className="block px-4 py-2 text-sm text-black hover:bg-gray-100 rounded-md"
+                                    >
+                                        {subItem.label}
+                                    </Link>
+                                ))}
                         </div>
                     ))}
                 </div>

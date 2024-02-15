@@ -7,8 +7,10 @@ const ContactInfo = () => {
     return (
         <div className="flex-col justify-center px-4">
             <Image
-                src="logo.png"
+                src="/logo.png"
                 alt="logo"
+                width={250}
+                height={150}
                 className="items-center w-[250px] h-[150px] object-fit rounded-lg"
             />
 

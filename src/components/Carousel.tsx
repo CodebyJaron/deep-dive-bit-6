@@ -25,7 +25,7 @@ const Carousel = ({ headerText, headerSubtext }: props) => {
     }, [images]);
 
     return (
-        <div className="h-[80vh] w-full max-w-full overflow-hidden rounded-b-[20%] flex flex-col justify-center items-center z-0">
+        <div className="relative md:h-[80vh] h-50 w-full max-w-full overflow-hidden rounded-b-[20%] flex flex-col justify-center items-center">
             {images.map((image, index) => (
                 <div
                     key={index}
@@ -36,18 +36,20 @@ const Carousel = ({ headerText, headerSubtext }: props) => {
                     <Image
                         src={image}
                         alt={`Image ${index + 1}`}
-                        className="blur-sm rounded-b-lg brightness-50"
+                        className=" rounded-b-lg brightness-50"
                         style={{ width: "100%", height: "auto" }}
                         width={1920}
                         height={1080}
                     />
                 </div>
             ))}
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
-                <h1 className="text-white text-[4.2rem] font-bold">
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center ">
+                <h1 className="text-white text-2xl font-bold md:text-6xl">
                     {headerText}
                 </h1>
-                <p className="text-gray-300 text-xl">{headerSubtext}</p>
+                <p className="text-gray-300 text-sm md:text-xl">
+                    {headerSubtext}
+                </p>
             </div>
         </div>
     );
