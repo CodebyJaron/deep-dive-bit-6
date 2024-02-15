@@ -10,11 +10,7 @@ const Carousel = ({ headerText, headerSubtext }: props) => {
     const [currentSlide, setCurrentSlide] = useState(0);
 
     const images = useMemo(
-        () => [
-            "/images/slide-1.jpg",
-            "/images/slide-2.jpg",
-            "/images/slide-3.jpeg",
-        ],
+        () => ["/images/slide-2.jpg", "/images/slide-3.jpeg"],
         []
     );
 
