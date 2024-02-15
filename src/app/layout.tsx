@@ -11,13 +11,17 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang='en'>
-            <body className={montserrat.className + ' bg-gray-100'}>
+        <html lang="en">
+            <body
+                className={
+                    montserrat.className + " bg-gray-100 overflow-x-hidden"
+                }
+            >
                 <div>
                     <Navbar />
                 </div>
 
-                <div className='bg-gray-100'>{children}</div>
+                <div className="bg-gray-100">{children}</div>
 
                 <div>
                     <Footer />
