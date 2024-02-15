@@ -27,6 +27,10 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({ trigger, children }) => {
         setIsOpen(false);
     };
 
+    const handleClick = () => {
+        setIsOpen(!isOpen);
+    };
+
     useEffect(() => {
         const dropdownElement = dropdownRef.current;
         if (dropdownElement) {
@@ -40,7 +44,7 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({ trigger, children }) => {
     }, []);
 
     return (
-        <div className='relative' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+        <div className='relative' onMouseEnter={handleMouseEnter} onClick={handleClick} onMouseLeave={handleMouseLeave}>
             <div className='inline-block'>{trigger}</div>
             {isOpen && (
                 <div

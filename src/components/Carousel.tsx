@@ -21,7 +21,7 @@ const Carousel = ({ headerText, headerSubtext }: props) => {
     }, []);
 
     return (
-        <div className='h-[80vh] w-full max-w-full overflow-hidden rounded-b-[20%] flex flex-col justify-center items-center'>
+        <div className='relative h-[80vh] -z-8 w-full max-w-full overflow-hidden rounded-b-[20%] flex flex-col justify-center items-center'>
             {images.map((image, index) => (
                 <div key={index} className={`carousel-slide ${index === currentSlide ? '' : 'hidden'}`}>
                     <img
