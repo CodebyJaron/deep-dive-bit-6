@@ -29,7 +29,7 @@ const Carousel = ({ headerText, headerSubtext }: props) => {
     }, [images]);
 
     return (
-        <div className="h-[80vh] w-full max-w-full overflow-hidden rounded-b-[20%] flex flex-col justify-center items-center z-0">
+        <div className="h-[80vh] w-full max-w-full overflow-hidden rounded-b-[20%] flex flex-col justify-center items-center z-0">=======
             {images.map((image, index) => (
                 <div
                     key={index}

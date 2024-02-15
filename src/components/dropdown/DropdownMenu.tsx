@@ -34,6 +34,10 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({ trigger, children }) => {
         }, 200);
     };
 
+    const handleClick = () => {
+        setIsOpen(!isOpen);
+    };
+
     useEffect(() => {
         return () => {
             if (timeoutRef.current) {

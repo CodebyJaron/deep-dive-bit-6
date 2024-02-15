@@ -15,7 +15,7 @@ const ContactForm = () => {
                                 name='first-name'
                                 id='first-name'
                                 autoComplete='given-name'
-                                className='block w-full bg-gray-100 rounded-md px-3.5 py-2 text-gray-900 shadow-sm border-2 border-primary focus:border-[3px] sm:text-sm'
+                                className='block w-full bg-gray-100 rounded-md px-3.5 py-2 text-gray-900 shadow-sm border-2 border-gray-300 focus:border-[3px] sm:text-sm'
                                 style={{ outline: 'none' }}
                             />
                         </div>
@@ -30,7 +30,7 @@ const ContactForm = () => {
                                 name='last-name'
                                 id='last-name'
                                 autoComplete='family-name'
-                                className='block w-full bg-gray-100 rounded-md px-3.5 py-2 text-gray-900 shadow-sm border-2 border-primary focus:border-[3px] sm:text-sm'
+                                className='block w-full bg-gray-100 rounded-md px-3.5 py-2 text-gray-900 shadow-sm border-2 border-gray-300 focus:border-[3px] sm:text-sm'
                                 style={{ outline: 'none' }}
                             />
                         </div>
@@ -45,7 +45,7 @@ const ContactForm = () => {
                                 name='email'
                                 id='email'
                                 autoComplete='email'
-                                className='block w-full bg-gray-100 rounded-md px-3.5 py-2 text-gray-900 shadow-sm border-2 border-primary focus:border-[3px] sm:text-sm'
+                                className='block w-full bg-gray-100 rounded-md px-3.5 py-2 text-gray-900 shadow-sm border-2 border-gray-300 focus:border-[3px] sm:text-sm'
                                 style={{ outline: 'none' }}
                             />
                         </div>
@@ -60,7 +60,7 @@ const ContactForm = () => {
                                 name='phone-number'
                                 id='phone-number'
                                 autoComplete='tel'
-                                className='block w-full bg-gray-100 rounded-md px-3.5 py-2 text-gray-900 shadow-sm border-2 border-primary focus:border-[3px] sm:text-sm'
+                                className='block w-full bg-gray-100 rounded-md px-3.5 py-2 text-gray-900 shadow-sm border-2 border-gray-300 focus:border-[3px] sm:text-sm'
                                 style={{ outline: 'none' }}
                             />
                         </div>
@@ -74,7 +74,7 @@ const ContactForm = () => {
                                 name='message'
                                 id='message'
                                 rows={4}
-                                className='block w-full bg-gray-100 rounded-md px-3.5 py-2 text-gray-900 shadow-sm border-2 border-primary focus:border-[3px] sm:text-sm'
+                                className='block w-full bg-gray-100 rounded-md px-3.5 py-2 text-gray-900 shadow-sm border-2 border-gray-300 focus:border-[3px] sm:text-sm'
                                 style={{ outline: 'none' }}
                             ></textarea>
                         </div>
