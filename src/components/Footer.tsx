@@ -6,44 +6,44 @@ import Image from 'next/image';
 const Footer = () => {
     const paginateItems = [
         {
-            href: '/',
-            text: 'Home',
-            icon: <MdKeyboardArrowRight className='w-4 h-4 text-primary' />,
+            href: "/",
+            text: "Home",
+            icon: <MdKeyboardArrowRight className="w-4 h-4 text-primary" />,
         },
         {
-            href: '/',
-            text: 'Meer verhalen',
-            icon: <MdKeyboardArrowRight className='w-4 h-4 text-primary' />,
+            href: "/verhalen",
+            text: "Meer verhalen",
+            icon: <MdKeyboardArrowRight className="w-4 h-4 text-primary" />,
         },
         {
-            href: '/',
-            text: 'Meer karakters',
-            icon: <MdKeyboardArrowRight className='w-4 h-4 text-primary' />,
+            href: "/karakters",
+            text: "Meer karakters",
+            icon: <MdKeyboardArrowRight className="w-4 h-4 text-primary" />,
         },
         {
-            href: '/',
-            text: 'Contact',
-            icon: <MdKeyboardArrowRight className='w-4 h-4 text-primary' />,
+            href: "/contact",
+            text: "Contact",
+            icon: <MdKeyboardArrowRight className="w-4 h-4 text-primary" />,
         },
         {
-            href: '/',
-            text: 'Home',
-            icon: <MdKeyboardArrowRight className='w-4 h-4 text-primary' />,
+            href: "/",
+            text: "Home",
+            icon: <MdKeyboardArrowRight className="w-4 h-4 text-primary" />,
         },
         {
-            href: '/',
-            text: 'Meer verhalen',
-            icon: <MdKeyboardArrowRight className='w-4 h-4 text-primary' />,
+            href: "/",
+            text: "Meer verhalen",
+            icon: <MdKeyboardArrowRight className="w-4 h-4 text-primary" />,
         },
         {
-            href: '/',
-            text: 'Meer karakters',
-            icon: <MdKeyboardArrowRight className='w-4 h-4 text-primary' />,
+            href: "/",
+            text: "Meer karakters",
+            icon: <MdKeyboardArrowRight className="w-4 h-4 text-primary" />,
         },
         {
-            href: '/',
-            text: 'Contdact',
-            icon: <MdKeyboardArrowRight className='w-4 h-4 text-primary' />,
+            href: "/",
+            text: "Contact",
+            icon: <MdKeyboardArrowRight className="w-4 h-4 text-primary" />,
         },
     ];
 
@@ -111,8 +111,8 @@ const Footer = () => {
             <div className="py-8 bg-white flex flex-col items-center lg:flex-row justify-between mt-4 lg:px-24 sm:px-12 px-6">
                 <div className="flex justify-center mb-8 lg:mb-0">
                     <Image
-                        width={100}
-                        height={100}
+                        width={200}
+                        height={200}
                         src="/logo.png"
                         alt="logo"
                         className="w-32 cursor-default"

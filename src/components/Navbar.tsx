@@ -50,8 +50,8 @@ const Navbar = () => {
                             src="/logo.png"
                             alt="logo"
                             className="w-16 cursor-pointer"
-                            width={64}
-                            height={64}
+                            width={150}
+                            height={150}
                         />
                     </Link>
                 </div>
@@ -80,7 +80,7 @@ const Navbar = () => {
                                                 <Link
                                                     key={subIndex}
                                                     href={subItem.link}
-                                                    className="block px-4 py-2 text-sm text-black hover:bg-gray-100 rounded-md"
+                                                    className="block mx-2 px-4 py-2 text-sm text-black hover:bg-gray-300 font-semibold rounded-md"
                                                 >
                                                     {subItem.label}
                                                 </Link>
@@ -123,7 +123,11 @@ const Navbar = () => {
                     {NAV_ITEMS.map((item, index) => (
                         <div key={index}>
                             <div className="px-4 py-2 text-black font-bold border-b border-gray-200">
-                                {item.label}
+                                {item.label === "Home" ? (
+                                    <Link href={item.link}>{item.label}</Link>
+                                ) : (
+                                    <span>{item.label}</span>
+                                )}
                             </div>
                             {item.dropdown.length > 0 &&
                                 item.dropdown.map((subItem, subIndex) => (
