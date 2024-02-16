@@ -58,32 +58,43 @@ const Navbar = () => {
                 {/* Navigation items */}
                 <div className="flex-grow flex justify-center">
                     <div className="hidden md:flex items-center gap-8">
-                        {NAV_ITEMS.map((item, index) => (
-                            <DropdownMenu
-                                key={index}
-                                trigger={
-                                    <div className="flex items-center">
-                                        <span className="inline-block uppercase font-bold text-[10px] cursor-pointer">
-                                            {item.label}
-                                        </span>
-                                        {item.dropdown.length > 0 && (
-                                            <MdKeyboardArrowDown className="w-4 h-4 ml-1" />
+                        {NAV_ITEMS.map((item, index) =>
+                            item.dropdown.length > 0 ? (
+                                <DropdownMenu
+                                    key={index}
+                                    item={item}
+                                    trigger={
+                                        <div className="flex items-center">
+                                            <span className="inline-block uppercase font-bold text-[10px] cursor-pointer">
+                                                {item.label}
+                                            </span>
+                                            {item.dropdown.length > 0 && (
+                                                <MdKeyboardArrowDown className="w-4 h-4 ml-1" />
+                                            )}
+                                        </div>
+                                    }
+                                >
+                                    {item.dropdown.length > 0 &&
+                                        item.dropdown.map(
+                                            (subItem, subIndex) => (
+                                                <Link
+                                                    key={subIndex}
+                                                    href={subItem.link}
+                                                    className="block px-4 py-2 text-sm text-black hover:bg-gray-100 rounded-md"
+                                                >
+                                                    {subItem.label}
+                                                </Link>
+                                            )
                                         )}
-                                    </div>
-                                }
-                            >
-                                {item.dropdown.length > 0 &&
-                                    item.dropdown.map((subItem, subIndex) => (
-                                        <Link
-                                            key={subIndex}
-                                            href={subItem.link}
-                                            className="block px-4 py-2 text-sm text-black hover:bg-gray-100 rounded-md"
-                                        >
-                                            {subItem.label}
-                                        </Link>
-                                    ))}
-                            </DropdownMenu>
-                        ))}
+                                </DropdownMenu>
+                            ) : (
+                                <Link key={index} href={item.link}>
+                                    <span className="uppercase font-bold text-[10px] cursor-pointer">
+                                        {item.label}
+                                    </span>
+                                </Link>
+                            )
+                        )}
                     </div>
                 </div>
                 {/* Contact Button */}
